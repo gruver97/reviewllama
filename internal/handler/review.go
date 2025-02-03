@@ -11,6 +11,15 @@ import (
 	"strings"
 )
 
+// ReviewPost
+/*
+curl --location 'http://localhost:8080/review' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: x-supplier-id=fb25c9e9-cae8-52db-b68e-736c1466a3f5' \
+--data '{
+    "text": "cGFja2FnZSBtYXRodXRpbHMKCi8vIEFkZCByZXR1cm5zIHRoZSBzdW0gb2YgdHdvIGludGVnZXJzLgpmdW5jIEFkZChhLCBiIGludCkgaW50IHsKICAgIHJldHVybiBhICsgYgp9Cg=="
+}'
+*/
 func ReviewPost(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	defer r.Body.Close()
