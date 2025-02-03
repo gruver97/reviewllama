@@ -1,0 +1,9 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  ollama:run:default:
+    cmd: ollama run qwen2.5-coder:32b
+  ollama:stop:default:
+    cmd: ollama stop qwen2.5-coder:32b
